@@ -1,0 +1,31 @@
+#include<stdio.h>
+main()
+{
+	int a[5][5],n,m,i,j,k=1;
+	printf("enter the no of rows and column");
+	scanf("%d%d",&n,&m);
+	gor(i=0;i<n;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			if(i%2==0)
+			{
+				a[i][j]=k;
+				k++;
+			}
+			else
+			{
+				a[i][m-(j+1)]=k;
+				k++;
+			}
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+		print("\n");
+	}
+}
